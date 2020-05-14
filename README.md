@@ -1,30 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+## Showcase of Vonage Video API
 
-## Getting Started
+This is a demo project to showcase the usage of Vonage Video API and also the OpenTok signaling feature. 
+In this project you will be able to start a 1-1 call with another person and one of them will also be able to share a
+youtube video and control without having to screenshare.
 
-First, run the development server:
+### Setup
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Clone this repo `git clone https://github.com/nbermudezs/vonage-video-cert-project`
+2. Install dependencies: `yarn`
+3. Copy environment settings: `cp .env.example .env`
+4. Set the values for the environment variables.
+5. Run the server: `yarn dev`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Using the app
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. You can give your 1-1 call a `room` name by passing a `room` param in the URL:
+For example, `http://localhost:3000/?room=potato`
+2. User A will access the meeting with `http://localhost:3000/?room=potato` and User B will do it with
+`http://localhost:3000/?room=potato&subscribeOnly=true`. 
+-  this is just a hacky way to tell the app who will be presenting the YouTube video.
+3. from User A click on the 'Share youtube video' button
+4. see that the video is also shown on User B and that when User A pauses the video it also pauses for User B.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

@@ -8,7 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
     "next": "9.4.0",
+    "opentok": "^2.10.0",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
